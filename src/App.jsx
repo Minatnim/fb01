@@ -1,5 +1,7 @@
+import Router from './template/route/Router';
+
 function App() {
-  return <></>;
+  return <Router />;
 }
 
 export default App;

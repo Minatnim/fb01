@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --header-height: calc(2.5rem + 0.5rem * 2);
+    --content-height: calc(100vh - var(--header-height));
+  }
+
+  body {
+    background-color: #f0f2f5;
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+  }
+}
+
+@layer components {
+  .scrollbar::-webkit-scrollbar {
+    @apply w-[8px];
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded-full border-[3px] border-[#f0f2f5] border-solid;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+}
